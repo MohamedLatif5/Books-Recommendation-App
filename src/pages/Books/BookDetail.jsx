@@ -20,11 +20,14 @@ const BookDetail = () => {
     fetchBookDetails();
   }, [id]);
 
+  // دالة لتنظيف الوصف من أكواد HTML واستبدال علامات الاقتباس، المزدوجة
   const cleanDescription = (description) => {
-    if (!description) return '';
+    if (!description) return ''; // إذا لم يكن هناك وصف
 
+    // إزالة جميع الأكواد HTML باستخدام تعبير منتظم
     let strippedDescription = description.replace(/<\/?[^>]+(>|$)/g, '');
 
+    // استبدال علامات الاقتباس المزدوجة بـ &quot;
     strippedDescription = strippedDescription.replace(/"/g, '&quot;');
 
     return strippedDescription;
@@ -43,6 +46,7 @@ const BookDetail = () => {
               <h2>{bookInfo.volumeInfo.title}</h2>
               <h4>{bookInfo.volumeInfo.subtitle}</h4>
 
+              {/* استخدام الدالة لتنظيف الوصف قبل عرضه */}
               <p>{cleanDescription(bookInfo.volumeInfo.description)}</p>
 
               <h6><span>Publisher:</span> {bookInfo.volumeInfo.publisher}</h6>

@@ -23,7 +23,7 @@ function ContactForm() {
       const result = await res.json();
       setResponse(result.message);
       if (result.redirect) {
-        window.location.href = result.redirect; 
+        window.location.href = result.redirect; // توجيه المستخدم إلى الصفحة الجديدة
     }
     } catch (error) {
       setResponse('Error: ' + error.message);

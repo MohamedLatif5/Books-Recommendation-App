@@ -73,11 +73,11 @@ export default function Home() {
       <section>
         <Books />
       </section>
-      <section>
+      {/* <section>
         <Link className='btn btn-dark m-5' to='/CategoryPage'>
           CategoryPage
         </Link>
-      </section>
+      </section> */}
     </>
   );
 }

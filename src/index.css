@@ -1,11 +1,19 @@
-.student {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  font-size: 2em;
-  padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.507);
-}
-.student p {
+body {
   margin: 0;
+
+  text-align: center;
+  text-align: center;
+
+ 
+
+  font-weight: 400;
+  font-style: normal;
 }
 
+code {
+  margin: 0;
+  text-align: center;
+  font-family: "Spicy Rice", serif;
+  font-weight: 400;
+  font-style: normal;
+}

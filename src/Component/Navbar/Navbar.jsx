@@ -5,6 +5,27 @@ export default function Navbar() {
   const user = true;
   return (
     <div>
+      {/* <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+                 <div className="wrap">
+        <div className="container">
+          <div className="row justify-content-between">
+            <div className="col d-flex align-items-center">
+              <p className="mb-0 phone"><span className="mailus">Phone no:</span> <a href="#">+00 1234 567</a> or <span className="mailus">email us:</span> <a href="#">emailsample@email.com</a></p>
+            </div>
+            <div className="col d-flex justify-content-end">
+              <div className="social-media">
+                <p className="mb-0 d-flex">
+                  <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-facebook"><i className="sr-only">Facebook</i></span></a>
+                  <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-twitter"><i className="sr-only">Twitter</i></span></a>
+                  <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-instagram"><i className="sr-only">Instagram</i></span></a>
+                  <a href="#" className="d-flex align-items-center justify-content-center"><span className="fa fa-dribbble"><i className="sr-only">Dribbble</i></span></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
       <nav
         className='navbar navbar-expand-lg bg-body-tertiary pt-4 pb-4 '
         data-bs-theme='dark'
@@ -36,8 +57,9 @@ export default function Navbar() {
                   Home
                 </Link>
               </li>
+             
                 <li className='nav-item'>
-                <Link className='nav-link active' to='recommendations'>
+                <Link className='nav-link active' to='RecommendedBooks'>
                 Recommendations
                 </Link>
               </li>
