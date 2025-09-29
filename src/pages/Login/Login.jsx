@@ -62,7 +62,13 @@ function ContactForm() {
             <label>
               <input type="checkbox" /> Remember me
             </label>
-            <a href="#">Forget password?</a>
+            <button
+              type="button"
+              className="btn-link p-0 border-0 bg-transparent text-primary text-decoration-underline"
+              onClick={() => alert("Feature coming soon!")}
+            >
+              Forget password?
+            </button>
           </div>
           <button type="submit" className="btn">
             Login
