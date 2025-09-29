@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Navbar from "./Component/Navbar/Navbar";
 import Home from "./pages/Home/Home";
-import RecommendedBooks from  './pages/RecommendedBooks/RecommendedBooks'
+import RecommendedBooks from "./pages/RecommendedBooks/RecommendedBooks";
 import Books from "./pages/Books/Books";
 import BookDetails from "./pages/BookDetails/BookDetails";
 import Authors from "./pages/Author/Authors";
@@ -19,9 +19,6 @@ import LogOut from "./pages/LogOut/LogOut";
 import BookPage from "./pages/bookPage/BookPage";
 import Book from "./pages/BooksSection/BooksSection";
 import TopSearch from "./pages/TopSearch/TopSearch Page/TopSearch";
-//import BookPage from './pages/TopSearch/bookPage/BookPage';
-import Search from "./pages/TopSearch/search/Search";
-import BannarCard from "./pages/TopSearch/bannarCard/BannarCard";
 
 import CategoryPage from "./pages/CategoryPage/CategoryPage";
 
@@ -32,10 +29,10 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <div className=''>
+      <div className="">
         <Routes>
           <Route
-            path='/'
+            path="/"
             element={
               // <ProtectedRoute>
               <Home />
@@ -44,7 +41,7 @@ export default function App() {
           />
 
           <Route
-            path='home'
+            path="home"
             element={
               // <ProtectedRoute>
               <Home />
@@ -52,7 +49,7 @@ export default function App() {
             }
           />
           <Route
-            path='books'
+            path="books"
             element={
               // <ProtectedRoute>
               <Books />
@@ -60,15 +57,15 @@ export default function App() {
             }
           />
           <Route
-            path='author'
+            path="author"
             element={
               // <ProtectedRoute>
               <Authors />
               // </ProtectedRoute>
             }
           />
-            <Route
-            path='recommendations'
+          <Route
+            path="recommendations"
             element={
               // <ProtectedRoute>
               <Book />
@@ -76,7 +73,7 @@ export default function App() {
             }
           />
           <Route
-            path='TopSearch'
+            path="TopSearch"
             element={
               // <ProtectedRoute>
               <TopSearch />
@@ -85,7 +82,7 @@ export default function App() {
           />
 
           <Route
-            path='CategoryPage'
+            path="CategoryPage"
             element={
               // <ProtectedRoute>
               <CategoryPage />
@@ -94,7 +91,7 @@ export default function App() {
           />
 
           <Route
-            path='about'
+            path="about"
             element={
               // <ProtectedRoute>
               <About />
@@ -102,19 +99,23 @@ export default function App() {
             }
           />
           <Route
-            path='contact'
+            path="contact"
             element={
               // <ProtectedRoute>
               <Contact />
               // </ProtectedRoute>
             }
           />
-  
-  <Route exact path='/RecommendedBooks' element={<RecommendedBooks />} />
-          <Route exact path='/details/:id' element={<BookPage />} />
 
           <Route
-            path='/book/:id'
+            exact
+            path="/RecommendedBooks"
+            element={<RecommendedBooks />}
+          />
+          <Route exact path="/details/:id" element={<BookPage />} />
+
+          <Route
+            path="/book/:id"
             element={
               //<ProtectedRoute>
               <BookDetails />
@@ -130,12 +131,12 @@ export default function App() {
             }
           /> */}
           {/* <Route path="login" element={<Login saveUserData={saveUserData} />} /> */}
-          <Route path='register' element={<Register />} />
-          <Route path='login' element={<Login />} />
-          <Route path='logout' element={<LogOut />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="logout" element={<LogOut />} />
           <Route
-            path='*'
-            element={<h1 className='text-danger text-center '>NOT FOUND</h1>}
+            path="*"
+            element={<h1 className="text-danger text-center ">NOT FOUND</h1>}
           />
         </Routes>
       </div>

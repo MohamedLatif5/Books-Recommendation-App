@@ -16,6 +16,16 @@ export default function Authors() {
   }, []);
 
   useEffect(() => {
+    const filterAuthors = () => {
+      if (search === "") {
+        setFilteredAuthors(authors);
+      } else {
+        const filtered = authors.filter((author) =>
+          author.toLowerCase().includes(search.toLowerCase())
+        );
+        setFilteredAuthors(filtered);
+      }
+    };
     filterAuthors();
   }, [search, authors]);
 
@@ -32,19 +42,6 @@ export default function Authors() {
       console.error("Error fetching authors:", error);
       setLoading(false);
     }
-  }
-
-  // Filter authors based on search input (starting letter)
-  function filterAuthors() {
-    if (search.trim() === "") {
-      setFilteredAuthors(authors);
-    } else {
-      const filtered = authors.filter((author) =>
-        author.name.first.toLowerCase().startsWith(search.toLowerCase())
-      );
-      setFilteredAuthors(filtered);
-    }
-    setCurrentPage(1); // Reset to first page after search
   }
 
   // Get current authors for pagination

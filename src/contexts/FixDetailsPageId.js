@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext } from "react";
 import { useNavigate } from "react-router-dom";
 export let FixDetailsPageId = createContext(null);
@@ -6,7 +5,7 @@ export let FixDetailsPageId = createContext(null);
 export const FixDetailsPageIdProvider = ({ children }) => {
   const navigate = useNavigate();
   const moveTo = (id) => {
-    // مشكلة تظهر فى الصور المستخدمة فى كومبوننت سواجر عند السحب بسرعة تحدث مشكلة فى الايدى من الباك يضيف لل ايدى اكس وهذة الدالة لحل هذه المشكلة
+    // Fix for ID issues when swiping quickly in carousel component - removes extra 'x' added by backend
     console.log(id);
     const num = +id;
     if (isNaN(num)) {

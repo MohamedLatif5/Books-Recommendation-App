@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import './Register.css';
+import React, { useState } from "react";
+import "./Register.css";
 
 export default function Register() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [response, setResponse] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [response, setResponse] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // تحقق من شروط كلمة المرور
+    // Check password requirements
     if (password.length < 8) {
       setMessage("Password must be at least 8 characters.");
       return;
@@ -22,24 +22,28 @@ export default function Register() {
     }
 
     const formData = new FormData();
-    formData.append('name', name);
-    formData.append('email', email);
-    formData.append('password', password); // تأكد من تطابق الأسماء مع PHP
-    formData.append('confirm_password', confirmPassword); // تأكد من تطابق الأسماء مع PHP
+    formData.append("name", name);
+    formData.append("email", email);
+    formData.append("password", password); // Ensure field names match PHP backend
+    formData.append("confirm_password", confirmPassword); // Ensure field names match PHP backend
 
     try {
-      const res = await fetch('http://localhost/contact-form-server/register.php', {
-        method: 'POST',
-        body: formData
-      });
+      const res = await fetch(
+        "http://localhost/contact-form-server/register.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const result = await res.json();
       setResponse(result.message);
-       if (result.redirect) {
-         window.location.href = result.redirect;}
-      setMessage(''); // إعادة تعيين الرسالة عند نجاح التسجيل
+      if (result.redirect) {
+        window.location.href = result.redirect;
+      }
+      setMessage(""); // Reset message on successful registration
     } catch (error) {
-      setResponse('Error: ' + error.message);
+      setResponse("Error: " + error.message);
     }
   };
 
@@ -47,8 +51,8 @@ export default function Register() {
     <div className="Regisert">
       <form className="Re_form" onSubmit={handleSubmit}>
         <h1>User Registration</h1>
-        {message && <p style={{ color: 'red' }}>{message}</p>}
-        {response && <p style={{ color: 'green' }}>{response}</p>}
+        {message && <p style={{ color: "red" }}>{message}</p>}
+        {response && <p style={{ color: "green" }}>{response}</p>}
         <input
           type="text"
           value={name}
