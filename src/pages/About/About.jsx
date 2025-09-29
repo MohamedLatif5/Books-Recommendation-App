@@ -26,7 +26,7 @@ export default function Contact() {
               <div className="media-body py-4 px-3">
                 <h3 className="heading">Map Direction</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" className="btn btn-primary">Read more</a></p>
+                <p><button type="button" className="btn btn-primary">Read more</button></p>
               </div>
             </div>      
           </div>
@@ -36,7 +36,7 @@ export default function Contact() {
               <div className="media-body py-4 px-3">
                 <h3 className="heading">Accomodation Services</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" className="btn btn-primary">Read more</a></p>
+                <p><button type="button" className="btn btn-primary">Read more</button></p>
               </div>
             </div>    
           </div>
@@ -46,7 +46,7 @@ export default function Contact() {
               <div className="media-body py-4 px-3">
                 <h3 className="heading">Great Experience</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" className="btn btn-primary">Read more</a></p>
+                <p><button type="button" className="btn btn-primary">Read more</button></p>
               </div>
             </div>      
           </div>
