@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Books-Recommendation-App/static/css/main.2222f7eb.css",
-    "main.js": "/Books-Recommendation-App/static/js/main.d39cca4f.js",
+    "main.js": "/Books-Recommendation-App/static/js/main.cc51b9c3.js",
     "index.html": "/Books-Recommendation-App/index.html",
     "main.2222f7eb.css.map": "/Books-Recommendation-App/static/css/main.2222f7eb.css.map",
-    "main.d39cca4f.js.map": "/Books-Recommendation-App/static/js/main.d39cca4f.js.map"
+    "main.cc51b9c3.js.map": "/Books-Recommendation-App/static/js/main.cc51b9c3.js.map"
   },
   "entrypoints": [
     "static/css/main.2222f7eb.css",
-    "static/js/main.d39cca4f.js"
+    "static/js/main.cc51b9c3.js"
   ]
 }
