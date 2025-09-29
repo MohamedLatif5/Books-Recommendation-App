@@ -15,12 +15,12 @@ import FixDetailsPageIdProvider from "./contexts/FixDetailsPageId.js";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HashRouter>
-  <RecentApiProvider>
-    <FixDetailsPageIdProvider>
-      <App />
+    <RecentApiProvider>
+      <FixDetailsPageIdProvider>
+        <App />
       </FixDetailsPageIdProvider>
-  </RecentApiProvider>
-    </HashRouter>
+    </RecentApiProvider>
+  </HashRouter>
 );
 
 // reportWebVitals();
